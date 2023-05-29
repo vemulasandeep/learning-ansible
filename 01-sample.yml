@@ -4,7 +4,10 @@
     - name: Print Hello
       ansible.builtin.debug:
        msg: Hello
-    - #name: Print Fruit
+    - name: Print Fruit
       debug:
        msg: Apple
+#name is an option key but we always use this as best practice
+#ansible.builtin.debug is a collection, this is supported from 2.10, this is future
+#debug is module, this is supported only till 2.9 version, this will soon deprecated.
 
