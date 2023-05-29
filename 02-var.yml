@@ -9,7 +9,7 @@
 - name: Variables from file
   hosts: localhost
   vars_files:
-    -demo.var.yml
+    - demo-var.yml
   tasks:
     - name: Print URL
       ansible.builtin.debug:
