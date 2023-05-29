@@ -6,6 +6,8 @@
     - name: Print URL
       ansible.builtin.debug:
         msg: URL = {{URL}}
+
+
 - name: Variables from file
   hosts: localhost
   vars_files:
@@ -14,11 +16,13 @@
     - name: Print URL
       ansible.builtin.debug:
         msg: URL = {{URL}}
- - name: Variables from tasks level
-   hosts: localhost
-   tasks:
-     - name: Print variable
-       ansible.builtin.debug:
-          msg: URL = {{URL}}
-       vars:
-           URL: tasks.example.com
+
+
+- name: Variables from tasks level
+  hosts: localhost
+  tasks:
+   - name: Print variable
+     ansible.builtin.debug:
+        msg: URL = {{URL}}
+     vars:
+        URL: tasks.example.com
