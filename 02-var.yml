@@ -1,4 +1,4 @@
-- name: Play level Variables
+- name: Play level Variables demo
   hosts: localhost
   vars:
     URL: play.example.com
