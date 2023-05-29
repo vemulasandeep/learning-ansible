@@ -27,7 +27,7 @@
      vars:
         URL: tasks.example.com
 
-- name: Variables from tasks level
+- name: Variables from Inventory file level
   hosts: localhost
   tasks:
     - name: Print variable
