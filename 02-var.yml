@@ -33,3 +33,14 @@
     - name: Print variable
       ansible.builtin.debug:
         msg: URL = {{URL}}
+
+- name: Facts
+  hosts: localhost
+  tasks:
+    - name : Print hostname
+      ansible.builtin.debug:
+        msg : HOSTNAME = {{ansible_hostname}}, Memory ={{ansible_memory_mb.real.free}}
+    - name: Print FQDN
+      ansible.builtin.debug:
+        msg: "{{ ansible_fqdn }}"
+        # if any value starts with a variable then we need to quote it, Either single or double
