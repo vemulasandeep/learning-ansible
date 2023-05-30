@@ -64,7 +64,7 @@
 
     - name : store variable in a standard form
       ansible.builtin.set_fact:
-        LIST : "{{output1}}"
+        LIST : "{{output1.stdout_lines}}"
     - name : print output
       ansible.builtin.debug:
         msg: "{{LIST}}"
