@@ -66,5 +66,5 @@
       ansible.builtin.set_fact:
         LIST : "{{output1}}"
     - name : print output
-      ansible.buitlin.debug:
+      ansible.builtin.debug:
         msg: "{{LIST}}"
