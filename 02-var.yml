@@ -54,3 +54,17 @@
      - name : print output
        ansible.builtin.debug:
          msg: "{{output.stdout}}"
+
+- name : Storing output in a standard variable
+  hosts : localhost
+  tasks:
+    - name : List all the files
+      ansible.builtin.shell : ls
+      register : output1
+
+    - name : store variable in a standard form
+      ansible.builtin.set_fact:
+        LIST : {{output1}}
+    - name : print output
+      ansible.buitlin.debug:
+        msg: "{{LIST}}"
